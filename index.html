@@ -10,14 +10,55 @@
     <title>Weather Dashboard</title>
 </head>
 
-<body>
+<body class="flex-column min-100-vh">
     <header class="border rounded-pill">
         <h1>Weather Dashboard</h1>
     </header>
 
+    <main class="flex-row justify-space between">
+        <div class="col-12 col-md-3">
 
+            <!-- div for city searches -->
+            <div class="card">
+                <h2 class="card-header">Search for a City:</h2>
+                <form id="search-form" class="card-body">
+                    <label class="form-label" for="city"></label>
+                    <input type="text" name="city" id="city" class="form-input" placeholder="Las Vegas" />
+                    <button type="submit" id="search-Btn" class="btn">Search</button>
+                </form>
+            </div>
 
+            <!-- div for city search history -->
+            <div class="card">
+                <h2>This is where city history goes</h2>
+            </div>
+        </div>
 
+        <div class="col-12 col-md-9">
+            <div id="weather-container">
+                <!-- // div to display city weather info -->
+            </div>
+
+            <div id="forecast-container">
+
+                <!-- <div id="forecast-0" class="forecast">
+                    <img id="wicon-0" src="">
+                </div>
+                <div id="forecast-1" class="forecast">
+
+                </div>
+                <div id="forecast-2" class="forecast">
+
+                </div>
+                <div id="forecast-3" class="forecast">
+
+                </div>
+                <div id="forecast-4" class="forecast"> -->
+
+            </div>
+        </div>
+        </div>
+    </main>
 
     <script src="./assets/js/script.js"></script>
 </body>

@@ -1,7 +1,83 @@
 
 header {
     text-align: center;
-    background-color: cornflowerblue;
-    color: cornsilk;
-    width: auto;
+    background-color: darkcyan;
+    color: blanchedalmond;
+    margin-bottom:  25px;
 }
+
+/* .main {
+    max-width: 85vw;
+} */
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.min-100-vh {
+    min-height: 100vh;
+}
+
+.card {
+    margin: 0 0 20px 0;
+    border: 3px solid darkcyan;
+}
+
+.btn {
+    padding: 3px 3px;
+    display: block;
+    background-color: darkcyan;
+    margin: 5px 0;
+    color: blanchedalmond;
+    font-weight: bold;
+    width: 100%;
+}
+
+.form-label {
+    width: 100%;
+    display: block;
+}
+
+.forecast {
+    height: 200px;
+    width: 175px;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: darkcyan;
+    padding: 10px;
+    color: blanchedalmond;
+    margin-right: 20px;
+}
+
+.city {
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+#forecast-title {
+    font-weight: bolder;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+#weather-container {
+    margin-bottom: 20px;
+}
+
+#forecast-container {
+    justify-content: space-between;
+}
+
+
+
