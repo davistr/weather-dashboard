@@ -4,16 +4,18 @@ var cityFormEl = document.querySelector("#search-form");
 var cityInputEl = document.querySelector("#city");
 var weatherInputEl = document.querySelector("#weather-container");
 var forecastInputEl = document.querySelector("#forecast-container");
+var counter = 6;
+var key = 0;
 
 
 var getCities = function (cityName) {
     var apiKey = "72f0e6a86d77bd4ccda5c2b150f20525";
-    // var apiURL = ;
+
 
     fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey).then(function (response) {
         console.log(response);
         response.json().then(function (data) {
-            // console.log(data);
+            console.log(data);
             // console.log(data.name);
             // console.log(today);
             displayWeather(data);
@@ -37,37 +39,46 @@ var displayWeather = function (data) {
     var fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
     // data.name.classList.add = ("city");
 
-    // weatherInputEl.appendChild();
+    var iconCode = data.weather[0].icon;
 
-    document.getElementById('weather-container').innerHTML = data.name + "<br />" + "Temp: " + fahrenheit
-        + "&deg" + "F" + "<br />" + "Wind: " + data.wind.speed + " MPH" + "<br />" + data.weather.icon;
+
+    document.getElementById('weather-container').innerHTML = data.name + " " + today.toLocaleDateString("en-US") + "  " + "<img src=\"http://openweathermap.org/img/wn/" + iconCode + "@2x.png\">" + "<br />" + "Temp: " + fahrenheit
+        + "&deg" + "F" + "<br />" + "Wind: " + data.wind.speed + " MPH" + "<br />" + "Humidity: " + data.main.humidity + "%" + "<br />" + "UV Index:  " + data.uvi;
+
+    weatherInputEl.setAttribute('style', 'margin-bottom:20px; border: 3px solid darkcyan;');
 };
 
 var displayForecast = function (data) {
 
-    // var fahrenheit = Math.round(((parseFloat(data.list[i].main.temp) - 273.15) * 1.8) + 32);
-
     for (var i = 0; i < 5; i++) {
 
-        var iconCode = data.list[i].weather.icon;
-        var iconURL = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
-
-        // document.getElementById('forecast-' + i).innerHTML = "Temp: " + data.list[i].main.temp + "&deg" + "F" + "<br />" + "Wind: " + data.list[i].wind.speed +
-        //     "<br />";
-        // $("wicon-0").attr('src', "http://openweathermap.org/img/wn/" + iconCode + "@2x.png");
-
+        var iconCode = data.list[counter].weather[0].icon;
 
         var forecastEl = document.createElement('div');
         forecastEl.className = 'forecast';
 
-        forecastEl.innerHTML = "Temp: " + data.list[i].main.temp + "&deg" + "F" + "<br />" + "Wind: " + data.list[i].wind.speed +
-            "<br />";
+        forecastEl.innerHTML = data.list[counter].dt_txt + "<br />" + "<img src=\"http://openweathermap.org/img/wn/" + iconCode + "@2x.png\">" + "<br /v>" + "Temp: " + Math.round(((parseFloat(data.list[counter].main.temp) - 273.15) * 1.8) + 32) +
+            "&deg" + "F" + "<br />" + "Wind: " + data.list[counter].wind.speed + " MPH" +
+            "<br />" + "Humidity: " + data.list[counter].main.humidity + " %";
 
         forecastInputEl.appendChild(forecastEl);
-
+        counter += 8;
     }
-
 };
+
+
+var saveStorage = function (key, cityName) {
+    localStorage.setItem(key, cityName);
+}
+
+
+var loadStorage = function () {
+
+    // for (var i = 0; i < localStorage.length; i++) {
+    //     localStorage[i].
+    // }
+}
+
 
 var formSubmitHandler = function (event) {
     event.preventDefault();
@@ -82,7 +93,8 @@ var formSubmitHandler = function (event) {
         alert("Please enter a city name!");
     }
 
-    console.log(event);
+    saveStorage(key, cityName);
+    key++;
 };
 
 

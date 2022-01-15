@@ -50,7 +50,7 @@ header {
 }
 
 .forecast {
-    height: 200px;
+    height: 250px;
     width: 175px;
     border: 2px solid black;
     display: inline-block;
@@ -65,19 +65,23 @@ header {
     font-size: 32px;
 }
 
-#forecast-title {
+.forecast-title {
     font-weight: bolder;
     font-size: 22px;
     margin-bottom: 12px;
 }
 
-#weather-container {
+/* #weather-container {
     margin-bottom: 20px;
-}
+    border: 3px solid darkcyan;
+} */
 
 #forecast-container {
     justify-content: space-between;
 }
 
+/* #search-history {
+
+} */
 
 
