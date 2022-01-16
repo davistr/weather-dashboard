@@ -31,17 +31,18 @@ header {
 
 .card {
     margin: 0 0 20px 0;
-    border: 3px solid darkcyan;
+    /* border: 3px solid darkcyan; */
 }
 
 .btn {
     padding: 3px 3px;
     display: block;
     background-color: darkcyan;
-    margin: 5px 0;
+    margin: 12px 0px;
     color: blanchedalmond;
     font-weight: bold;
     width: 100%;
+    
 }
 
 .form-label {
@@ -71,6 +72,16 @@ header {
     margin-bottom: 12px;
 }
 
+.search-item {
+    background-color: grey;
+    color: white;
+    flex: 1;
+    margin-bottom: 5px;
+    padding: 12px 6px;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
 /* #weather-container {
     margin-bottom: 20px;
     border: 3px solid darkcyan;
@@ -80,8 +91,9 @@ header {
     justify-content: space-between;
 }
 
-/* #search-history {
-
-} */
+#search-history {
+    display: flex;
+    text-align: center;
+}
 
 
