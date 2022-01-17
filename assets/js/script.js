@@ -1,3 +1,4 @@
+// create date variable
 var today = new Date();
 
 var cityFormEl = document.querySelector("#search-form");
@@ -33,6 +34,7 @@ var getCities = function (cityName) {
     });
 };
 
+// display todays weather info
 var displayWeather = function (data) {
 
     var fahrenheit = Math.round(((parseFloat(data.main.temp) - 273.15) * 1.8) + 32);
@@ -44,15 +46,15 @@ var displayWeather = function (data) {
     weatherInputEl.setAttribute('style', 'margin-bottom:20px; border: 3px solid darkcyan; padding: 12px;');
 };
 
+// display 5 day forecast
 var displayForecast = function (data) {
 
     for (var i = 0; i < 5; i++) {
 
         var iconCode = data.list[counter].weather[0].icon;
-
+        // create new div for each forecast day
         var forecastEl = document.createElement('div');
         forecastEl.className = 'forecast';
-        // forecastDate.toLocaleDateString("en-US");
 
         forecastEl.innerHTML = data.list[counter].dt_txt + "<br />" + "<img src=\"http://openweathermap.org/img/wn/" + iconCode + "@2x.png\">" + "<br /v>" + "Temp: " + Math.round(((parseFloat(data.list[counter].main.temp) - 273.15) * 1.8) + 32) +
             "&deg" + "F" + "<br />" + "Wind: " + data.list[counter].wind.speed + " MPH" +
@@ -101,5 +103,5 @@ var formSubmitHandler = function (event) {
     key++;
 };
 
-// event listener for 
+// event listener for button
 cityFormEl.addEventListener("submit", formSubmitHandler);
