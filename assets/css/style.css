@@ -1,9 +1,8 @@
-
 header {
-    text-align: center;
-    background-color: darkcyan;
-    color: blanchedalmond;
-    margin-bottom:  25px;
+  text-align: center;
+  background-color: #3b5751;
+  color: #e2ded6;
+  margin-bottom: 25px;
 }
 
 /* .main {
@@ -11,75 +10,74 @@ header {
 } */
 
 .flex-row {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .justify-space-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .flex-column {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .min-100-vh {
-    min-height: 100vh;
+  min-height: 100vh;
 }
 
 .card {
-    margin: 0 0 20px 0;
-    /* border: 3px solid darkcyan; */
+  margin: 0 0 20px 0;
+  /* border: 3px solid darkcyan; */
 }
 
 .btn {
-    padding: 3px 3px;
-    display: block;
-    background-color: darkcyan;
-    margin: 12px 0px;
-    color: blanchedalmond;
-    font-weight: bold;
-    width: 100%;
-    
+  padding: 3px 3px;
+  display: block;
+  background-color: #3b5751;
+  margin: 12px 0px;
+  color: #e2ded6;
+  font-weight: bold;
+  width: 100%;
 }
 
 .form-label {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
 .forecast {
-    height: 250px;
-    width: 175px;
-    border: 2px solid black;
-    display: inline-block;
-    background-color: darkcyan;
-    padding: 10px;
-    color: blanchedalmond;
-    margin-right: 20px;
+  height: 250px;
+  width: 175px;
+  border: 2px solid black;
+  display: inline-block;
+  background-color: #3b5751;
+  padding: 10px;
+  color: #e2ded6;
+  margin-right: 20px;
 }
 
 .city {
-    font-weight: bolder;
-    font-size: 32px;
+  font-weight: bolder;
+  font-size: 32px;
 }
 
 .forecast-title {
-    font-weight: bolder;
-    font-size: 22px;
-    margin-bottom: 12px;
+  font-weight: bolder;
+  font-size: 22px;
+  margin-bottom: 12px;
 }
 
 .search-item {
-    background-color: grey;
-    color: white;
-    flex: 1;
-    margin-bottom: 5px;
-    padding: 12px 6px;
-    text-transform: uppercase;
-    border-radius: 10px;
+  background-color: grey;
+  color: white;
+  flex: 1;
+  margin-bottom: 5px;
+  padding: 12px 6px;
+  text-transform: uppercase;
+  border-radius: 10px;
 }
 
 /* #weather-container {
@@ -88,12 +86,10 @@ header {
 } */
 
 #forecast-container {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 #search-history {
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
 }
-
-
